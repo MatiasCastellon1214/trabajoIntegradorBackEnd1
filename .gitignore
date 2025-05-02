@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Excluir el archivo de propiedades real
+application.properties
+
+# Incluir el archivo de ejemplo
+!src/main/resources/application.example.properties
