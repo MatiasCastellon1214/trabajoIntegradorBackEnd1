@@ -9,19 +9,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/pacientes/post.js"></script>
+    <style>
+      body {
+        background-color: #121212;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .nav-link {
+        color: #bbb;
+      }
+
+      .nav-link:hover {
+        color: #fff;
+        background-color: #333;
+      }
+
+      .container {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      hr {
+        border-color: #555;
+      }
+    </style>
 </head>
+
 <body>
 <div class="container">
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-            <a class="nav-link" href="pacientesList.html">Listado Pacientes</a>
-            <a class="nav-link" href="pacienteAlta.html">Alta Pacientes</a>
-            <a class="nav-link" href="odontologoAlta.html">Alta Odontologos</a>
-            <a class="nav-link" href="odontologosList.html">Listado Odontologos</a>
-            <a class="nav-link" href="nuevoTurno.html">Nuevo Turno</a>
-            <a class="nav-link" href="turnosList.html">Listado de Turnos</a>
-        </li>
-    </ul>
+    <h2 class="text-center mb-4">Gestión de Turnos</h2>
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="pacientesList.html">Listado Pacientes</a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="odontologosList.html">Listado Odontologos</a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="turnosList.html">Listado de Turnos</a>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="pacienteAlta.html">Alta Pacientes</a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="odontologoAlta.html">Alta Odontologos</a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a class="nav-link btn btn-outline-light w-100" href="nuevoTurno.html">Nuevo Turno</a>
+        </div>
+    </div>
+
 
     <hr>
 </div>
