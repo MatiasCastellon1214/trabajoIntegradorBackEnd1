@@ -11,6 +11,75 @@
     <script type="text/javascript" src="js/odontologos/list.js"></script>
     <script type="text/javascript" src="js/odontologos/put.js"></script>
     <script type="text/javascript" src="js/odontologos/delete.js"></script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .nav-link {
+            color: #bbb;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .form-control {
+            background-color: #2a2a2a;
+            color: #fff;
+            border-color: #444;
+        }
+
+        .form-control:focus {
+            background-color: #333;
+            color: #fff;
+            border-color: #888;
+        }
+
+        label {
+            color: #ddd;
+        }
+
+        hr {
+            border-color: #555;
+        }
+
+        .btn-primary {
+            background-color: #1976d2;
+            border-color: #1976d2;
+        }
+
+        .btn-primary:hover {
+            background-color: #115293;
+            border-color: #115293;
+        }
+
+        .table {
+            color: #fff;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #2a2a2a;
+        }
+
+        .table-striped tbody tr:nth-of-type(even) {
+            background-color: #1f1f1f;
+        }
+
+        .table thead {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -19,18 +88,18 @@
             <a class="nav-link" href="odontologoAlta.html">Agregar nuevo</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">Volver al indice</a>
+            <a class="nav-link" href="index.html">Volver al índice</a>
         </li>
     </ul>
 
     <div id="div_odontologo_table">
-        <h1>Odontologos</h1>
+        <h1>Odontólogos</h1>
         <div class="row col-md-20 table-responsive">
             <table id="odontologoTable" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Id(click en el boton Id para actulizar datos)</th>
-                    <th>Matricula</th>
+                    <th>Id (click en el botón Id para actualizar datos)</th>
+                    <th>Matrícula</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th></th>
@@ -42,32 +111,29 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6" style="display: none;
-											background-color:#e6fffa; padding:10px; border-radius:3px"
+        <div class="col-sm-6" style="display: none; background-color:#2e2e2e; padding:10px; border-radius:3px"
              id="div_odontologo_updating">
             <form id="update_odontologo_form">
                 <div class="form-group">
-                    <label >Id:</label>
+                    <label>Id:</label>
                     <input type="text" class="form-control" id="odontologo_id" readonly>
                 </div>
                 <div class="form-group">
-                    <label >Matricula:</label>
-                    <input type="number" class="form-control" placeholder="Matricula" id="matricula">
+                    <label>Matrícula:</label>
+                    <input type="number" class="form-control" placeholder="Matrícula" id="matricula">
                 </div>
                 <div class="form-group">
-                    <label >Nombre:</label>
+                    <label>Nombre:</label>
                     <input type="text" class="form-control" placeholder="Nombre" id="nombre">
                 </div>
                 <div class="form-group">
-                    <label >Apellido:</label>
+                    <label>Apellido:</label>
                     <input type="text" class="form-control" placeholder="Apellido" id="apellido">
                 </div>
 
-
                 <button type="submit" class="btn btn-primary">Modificar</button>
             </form>
-            <div id="response" style="display:none; margin:10px">
-            </div>
+            <div id="response" style="display:none; margin:10px"></div>
         </div>
     </div>
     <hr>
