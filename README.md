@@ -129,5 +129,11 @@ spring.datasource.password=your_password
 
 ```
 
+## Demo Live
+
+In the following demo, a patient is successfully discharged with their corresponding address recorded. Additionally, a dentist is assigned to them, along with a scheduled appointment to ensure proper follow-up care
+
+![Demo](public/trabajoIntegradorBackEnd1.gif)
+
 
 
