@@ -1,0 +1,3 @@
+2025-05-03 17:05:18 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DOMICIIOS" not found; SQL statement:
+SELECT * FROM domiciios [42102-214]
