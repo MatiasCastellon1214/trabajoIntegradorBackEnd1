@@ -1,63 +1,61 @@
-# 📦 Proyecto: Clínica Odontológica
+# 📦 Project: Dental Clinic
 
-Este proyecto es una aplicación Spring Boot desarrollada en Java 21 para gestionar pacientes, odontólogos y turnos en una clínica. Se ejecuta en un contenedor Docker de manera sencilla para facilitar la portabilidad y despliegue.
+This project is a Spring Boot application developed in Java 21 to manage patients, dentists and shifts in a clinic. It runs in a Docker container in a simple way to facilitate portability and deployment.
 
 ---
 
-## 🚀 Cómo correr la aplicación con Docker
+## 🚀 How to run the application with Docker
 
-Sigue los siguientes pasos para levantar la aplicación dentro de un contenedor Docker.
-
-### 1. Clonar el repositorio
+Follow the steps below to get the application up inside a Docker container.
 
 ```bash
 git clone https://github.com/tu-usuario/clinica-odontologica.git
 cd clinica-odontologica
 ```
 
-### 2. Compilar el proyecto y generar el .jar
+### 2. Compile the project and generate the .jar
 
 ```bash
 ./mvnw clean package
 ```
 
-Esto generará el archivo:
+This will generate the file:
 
 ```bash
 target/clinica-odontologica-0.0.1-SNAPSHOT.jar
 ```
 
-### 3. Ejecutar con Docker Compose
+### 3. Running with Docker Compose
 
 ```bash
 docker-compose up --build
 ```
 
 
-### 4. Accedé a la aplicación:
+### 4. Access the application:
 
-- Aplicación: http://localhost:8081
+- Application: http://localhost:8081
 
-- Consola H2: http://localhost:8081/h2-console
+- Console H2: http://localhost:8081/h2-console
 
   - JDBC URL: jdbc:h2:file:/data/clinica-odontologica
 
-  - Usuario: tu_usuario
+  - User: your_user
 
-  - Contraseña: tu_contraseña
+  - Password: your_pasword
 
 
-La aplicación estará disponible en:
+The application will be available in:
 
 - http://localhost:8081
 
-- Consola H2 (si está habilitada): http://localhost:8081/h2-console
+- Console H2 (if enabled): http://localhost:8081/h2-console
 
 ---
 
-## ⚙️ Archivos necesarios para Docker
+## ⚙️ Files needed for Docker
 
-Asegúrate de tener los siguientes archivos en tu proyecto (estos deben mantenerse en el repositorio):
+Make sure you have the following files in your project (these must be kept in the repository):
 
 Dockerfile
 
@@ -70,9 +68,9 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ```
 
-## 🛑 Archivos ignorados (.gitignore)
+## 🛑 Ignored files (.gitignore)
 
-Estos archivos/directorios se generan en tiempo de compilación y no deben subirse al repositorio:
+These files/directories are generated at compile time and should not be uploaded to the repository:
 
 ```bash
 /target/
@@ -98,9 +96,9 @@ services:
 ```
 
 
-## 📄 application.properties (desarrollo)
+## 📄 application.properties (development)
 
-El archivo src/main/resources/application.properties debería contener configuraciones para entorno de desarrollo, por ejemplo:
+The src/main/resources/application.properties file should contain settings for the development environment, for example:
 
 ```properties
 # LOGGING
@@ -109,7 +107,7 @@ logging.level.org.springframework.web=INFO
 logging.level.org.hibernate=ERROR
 logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} [%highlight(%-5level)] [%cyan(%thread)] %magenta(%logger{15}) - %msg%n
 
-# SERVIDOR
+# SERVER
 server.port=8081
 
 # JPA / HIBERNATE
@@ -123,7 +121,7 @@ spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 spring.h2.console.settings.web-allow-others=true
 
-# CONEXION A BASE DE DATOS H2 PERSISTENTE EN CONTENEDOR
+# CONNECTION TO PERSISTENT H2 DATABASE IN CONTAINER
 spring.datasource.url=jdbc:h2:file:/data/clinica-odontologica
 spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=your_username
